@@ -6,9 +6,6 @@ const getContacts = (req, res) => {
     res.status(200).json({"msg": "get all contacts"});
 };
 
-module.exports = {getContacts}
-
-
 //@desc Create a contacts
 //@route POST /api/contacts
 //@access public
@@ -16,9 +13,6 @@ module.exports = {getContacts}
 const createContact = (req, res) => {
     res.status(200).json({"msg": "Create a contact"});
 };
-
-module.exports = {createContact}
-
 
 //@desc Get a contact
 //@route GET /api/contacts/:id
@@ -29,8 +23,6 @@ const getContact = (req, res) => {
             `${req.params.id}`});
 }
 
-module.exports = {getContact}
-
 //@desc Update a contact
 //@route PUT /api/contacts/:id
 //@access public
@@ -39,8 +31,6 @@ const updateContact = (req, res) => {
     res.status(200).json({"msg": "Update contact for " +
             `${req.params.id}`})
 };
-
-module.exports = {updateContact}
 
 //@desc Delete a contact
 //@route DELETE /api/contacts/:id
@@ -51,4 +41,10 @@ const deleteContact = (req, res) => (req, res) => {
             `${req.params.id}`});
 }
 
-module.exports = {deleteContact}
+module.exports = {
+    getContacts,
+    createContact,
+    getContact,
+    updateContact,
+    deleteContact
+}

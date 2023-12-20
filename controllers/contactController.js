@@ -1,11 +1,13 @@
 const asyncHandler = require("express-async-handler")
+const Contact =  require("../models/contactModel")
 
 //@desc GET all contacts
 //@route GET /api/contacts
 //@access public
 
 const getContacts = asyncHandler(async (req, res) => {
-    res.status(200).json({"msg": "get all contacts"});
+    const contacts = await Contact.find();
+    res.status(200).json(contacts);
 });
 
 //@desc Create a contacts

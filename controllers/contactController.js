@@ -23,6 +23,7 @@ const createContact = asyncHandler(async (req, res) => {
     }
     const contact = await Contact.create(
         {
+            user_id: req.user.id,
             name,
             email,
             phone

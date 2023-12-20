@@ -43,7 +43,7 @@ const updateContact = (req, res) => {
 module.exports = {updateContact}
 
 //@desc Delete a contact
-//@route DEL /api/contacts/:id
+//@route DELETE /api/contacts/:id
 //@access public
 
 const deleteContact = (req, res) => (req, res) => {
